@@ -1,7 +1,13 @@
 import type { NextConfig } from "next";
 
+/** @type {NextConfig} */
 const nextConfig: NextConfig = {
-  /* config options here */
+  experimental: {
+    css: {
+      // Fallback to PostCSS instead of LightningCSS
+      useLightningCss: false,
+    },
+  },
 };
 
 export default nextConfig;
